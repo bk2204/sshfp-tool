@@ -22,7 +22,7 @@ module SSHFP
       m = /\A\[(.*?)\]:(\d+)\z/.match host
       if m
         host = m[1]
-        port = m[2]
+        port = m[2].to_i
       end
       [host, port, *remainder]
     end
