@@ -1,0 +1,5 @@
+sshfp-tool
+==========
+
+A simple tool to generate SSHFP records.  Simply pipe ssh-keyscan output into
+bin/sshfp-tool, and it will generate appropriate SSHFP records for each machine.
