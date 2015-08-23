@@ -1,7 +1,9 @@
 require 'base64'
 require 'digest'
 
+# Main module.
 module SSHFP
+  # Parser for ssh-keyscan output.
   class Parser
     def parse(data)
       lines = data.split("\n")
@@ -26,6 +28,7 @@ module SSHFP
     end
   end
 
+  # SSHFP entry.  Contains some additional metadata that isn't currently used.
   Entry = Struct.new(:host, :port, :algo, :key) do
     # Always use SHA-256.
     def digest
