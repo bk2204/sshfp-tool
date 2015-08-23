@@ -48,7 +48,7 @@ module SSHFP
     end
 
     def to_s
-      "#{host} IN SSHFP #{algo_number} #{digest}"
+      "#{host} IN SSHFP #{algo_number} 2 #{digest}"
     end
   end
 end
