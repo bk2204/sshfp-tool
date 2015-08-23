@@ -1,0 +1,10 @@
+#!/usr/bin/ruby
+
+require_relative '../lib/sshfp'
+
+parser = SSHFP::Parser.new
+
+ARGF.each_line do |l|
+  res = parser.parse(l)
+  res.each { |entry| puts entry.to_s }
+end
